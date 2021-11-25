@@ -1,0 +1,31 @@
+#include <Arduino.h>
+#define onboard 13
+
+int newbuttonRead;
+int buttonPin = 12;
+int redPin = 9;
+int oldbutton = 0;
+int ledState = 0;
+void setup()
+{
+  pinMode(buttonPin, INPUT);
+  Serial.begin(9600);
+  pinMode(redPin,OUTPUT);
+}
+
+void loop()
+{
+ newbuttonRead = digitalRead(buttonPin);
+ Serial.println(newbuttonRead);
+ if ((newbuttonRead == 1) && oldbutton == 0){
+   if (ledState == 0) {
+     digitalWrite(redPin,HIGH);
+     ledState = 1;
+   }
+   else {
+     digitalWrite(redPin,LOW);
+     ledState = 0;
+   }
+ }
+ oldbutton = newbuttonRead;
+}
