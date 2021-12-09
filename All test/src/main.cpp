@@ -1,4 +1,6 @@
+//sudo chmod a+rw /dev/ttyACM0
 #include <Arduino.h>
+<<<<<<< HEAD
 #include <Servo.h>
 #define onboard 13
 
@@ -164,5 +166,402 @@ digitalWrite(whitepin,HIGH);
    delay(300);
 
  }
+=======
+int potVal;
+int buzz1pin = 8;
+int potPin = A3;
+int dt1 =2;
+int dt2 = 10;
+ 
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(buzz1pin,OUTPUT);
+}
+
+void beat_jingle(){
+  digitalWrite(buzz1pin,HIGH);
+  delay(100);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   digitalWrite(buzz1pin,HIGH);
+   delay(10);
+   digitalWrite(buzz1pin,LOW);
+    delay(10);
+   digitalWrite(buzz1pin,HIGH);
+   delay(10);
+   digitalWrite(buzz1pin,LOW);
+   delay(100);
+
+   beat_jingle();
+  delay(100);
+  beat_jingle();
+  delay(100);
+  beat_jingle();
+  delay(100);
+  delay(350);
+  beat_jingle();
+  delay(100);
+  beat_jingle();
+  delay(100);
+  beat_jingle();
+  delay(100);
+  delay(3000);
+ 
+for(int j = 0; j<1000;j++){
+  
+  digitalWrite(buzz1pin,HIGH);
+    delayMicroseconds(100);
+    digitalWrite(buzz1pin,LOW);
+    delayMicroseconds(100);
+}
+  delay(300);
+
+}
+
+void loop() {
+  int dt1 = 105;
+  //jingle bells
+  digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(190);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(dt1);
+
+   delay(380);
+    //jingle bells
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  //jingle on the way
+   delay(dt1);
+   delay(380);
+
+      digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(180);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(190);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   //here
+   int dt2 = 100;
+   //oh what fun
+  delay(700);
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt2);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(dt2);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(300);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(150);
+//it is to ride
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(80);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  delay(80);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(125);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(250);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  //in a 1 horse open sliegh
+   delay(300);
+ 
+
+      digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(95);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(100);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(180);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(100);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(100);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(190);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(100);
+   delay(1100);
+
+    digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(190);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(dt1);
+
+   delay(380);
+    //jingle bells
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  //jingle on the way
+   delay(dt1);
+   delay(380);
+
+      digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(180);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(190);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt1);
+
+   //here
+   //oh what fun
+  delay(700);
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(dt2);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(dt2);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(300);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(150);
+//it is to ride
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(80);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  delay(80);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  
+   delay(125);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(250);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+  //in a 1 horse open sliegh
+   delay(300);
+ 
+
+      digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(95);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(100);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(180);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(100);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(150);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(100);
+
+   digitalWrite(buzz1pin,HIGH);
+  delay(190);
+  digitalWrite(buzz1pin,LOW);
+  delay(10);
+   
+   delay(100);
+
+
+delay(10000);
+>>>>>>> here lap
 
 }
