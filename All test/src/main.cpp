@@ -1,6 +1,5 @@
 //sudo chmod a+rw /dev/ttyACM0
 #include <Arduino.h>
-<<<<<<< HEAD
 #include <Servo.h>
 #define onboard 13
 
@@ -166,14 +165,13 @@ digitalWrite(whitepin,HIGH);
    delay(300);
 
  }
-=======
 int potVal;
 int buzz1pin = 8;
 int potPin = A3;
 int dt1 =2;
 int dt2 = 10;
  
-void setup() {
+void setup(){
   // put your setup code here, to run once:
   Serial.begin(9600);
   pinMode(buzz1pin,OUTPUT);
@@ -562,6 +560,4 @@ void loop() {
 
 
 delay(10000);
->>>>>>> here lap
-
 }
